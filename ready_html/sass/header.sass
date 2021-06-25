@@ -1,0 +1,471 @@
+@import bourbon
+@import fonts.sass
+@import vars.sass
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "OpenSansRegular", sans-serif
+	overflow-x: hidden
+	color: #222
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+	font-family: "OpenSansLight", sans-serif
+	font-weight: normal
+
+h1,
+.h1
+	font-size: em(41)
+	line-height: 1.15
+
+.ishome
+	h1
+		margin-top: 0
+
+.isnohome
+	.main-head
+		min-height: 0
+		padding-bottom: 25px
+		border-bottom: darken(#E9F0F8, 2%) 2px solid
+	h1
+		margin-top: 0
+	.page
+		margin-top: 30px
+
+h2,
+.h2
+	font-size: em(32px)
+
+h3, h4,
+.h3, .h4
+	font-family: "OpenSansSemiBold", sans-serif
+	text-transform: uppercase
+	font-size: em(15px)
+
+h4,
+.h4
+	font-size: em(13px)
+
+a
+	color: $accent
+	outline: none !important
+
+.text-center
+	text-align: center
+
+.hidden
+	display: none
+
+b, strong
+	font-family: "OpenSansSemiBold", sans-serif
+	font-weight: normal
+
+.main-head
+	background-image: url(../img/bg_top.jpg)
+	background-size: cover
+	background-position: top center
+	min-height: 100vh
+	overflow: hidden
+
+.mnu-line
+	padding-top: 48px
+
+.logo
+	display: block
+	width: 100px
+	img
+		width: 100%
+
+nav,
+.header-content
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+
+.main-mnu
+	text-align: center
+	font-size: em(13px)
+	> ul
+		> li
+			> a
+				display: block
+				padding: 12px 18px
+				color: #7e91a4
+				+mt(.5s)
+				&:hover
+					color: #414e5b
+			&.active
+				a
+					color: #414e5b
+					text-decoration: underline
+
+.phone
+	text-align: right
+	line-height: 1.4
+	.phone-wrap
+		color: #414e5b
+		font-family: "Exo2Bold", sans-serif
+		font-size: em(20px)
+		line-height: em(14px)
+		.fa
+			font-size: em(18px)
+			position: relative
+			top: 2px
+			margin-right: 5px
+	.callback
+		color: #7e91a4
+		display: inline-block
+		font-size: em(13px)
+		line-height: em(20px)
+		border-bottom: 1px dashed #7e91a4
+		+mt(.3s)
+		&:hover, &:focus
+			text-decoration: none
+			border-color: transparent
+
+.header-content
+	padding: 10% 0 5%
+	.button
+		margin-top: 62px
+	.responsive-img
+		width: 675px
+		max-width: 675px
+
+ul.home-list
+	margin-top: 42px
+	text-align: left
+	list-style-type: none
+	padding: 0
+	margin: 0
+	li
+		display: block
+		color: #414e5b
+		text-transform: uppercase
+		font-family: "OpenSansSemiBold", sans-serif
+		font-size: em(17px)
+		line-height: 1.8
+
+
+.button
+	display: inline-block
+	border: none
+	background-color: $btn
+	color: #fff
+	font-size: em(14px)
+	letter-spacing: 2px
+	text-transform: uppercase
+	padding: 13px 34px
+	border-radius: 3px
+	box-shadow: 0 4px 0 #0E9C4B
+	transition: all .15s ease
+	text-align: center
+	&:hover, &:focus
+		color: #fff
+		text-decoration: none
+	&:hover
+		background-color: #18CB65
+	&:active
+		background-color: #0E9C4B
+
+.button-small
+	padding: 9px 28px
+	font-size: em(13px)
+	background-color: $accent
+	box-shadow: 0px 4px 0px darken($accent, 6%)
+	&:hover
+		background-color: lighten($accent, 8%)
+		box-shadow: 0px 4px 0px darken($accent, 3%)
+	&:active, &:focus
+		background-color: darken($accent, 6%)
+		box-shadow: 0px 4px 0px darken($accent, 6%)
+
+.button-gray
+	background: #E8E8E8
+	color: #666
+	box-shadow: 0px 4px 0px darken(#E8E8E8, 6%)
+
+.button-accent
+	background-color: transparent
+	border: $accent 1px solid
+	box-shadow: 0px 4px 0px darken($accent, 6%)
+	color: $accent
+	font-family: "OpenSansSemiBold", sans-serif
+	&:hover
+		background-color: $accent
+	&:active, &:focus
+		background-color: darken($accent, 6%)
+
+.responsive-img
+	max-width: 100%
+
+// Mouse Wheel Icon
+.mouse-icon
+	border: 2px solid $blue
+	border-radius: 16px
+	height: 40px
+	width: 24px
+	z-index: 10
+	opacity: 0.7
+	display: inline-block
+	cursor: pointer
+	.wheel
+		animation-name: drop
+		animation-duration: 1s
+		animation-timing-function: linear
+		animation-delay: 0s
+		animation-iteration-count: infinite
+		animation-play-state: running
+		position: relative
+		border-radius: 10px
+		background: $blue
+		width: 2px
+		height: 6px
+		top: 4px
+		margin-left: auto
+		margin-right: auto
+
+@-webkit-keyframes drop
+	0%
+		top: 5px
+		opacity: 0
+
+	30%
+		top: 10px
+		opacity: 1
+
+	100%
+		top: 25px
+		opacity: 0
+
+
+@keyframes drop
+	0%
+		top: 5px
+		opacity: 0
+
+	30%
+		top: 10px
+		opacity: 1
+
+	100%
+		top: 25px
+		opacity: 0
+
+.mw-wrapper
+	text-align: center
+	padding: 40px 0
+
+//Toggle Mnu
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: $blue
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu
+	position: absolute
+	top: 0
+	right: 15px
+
+.hidden-mnu
+	background-color: $blue
+	display: none
+	position: relative
+	top: 20px
+	li
+		display: block
+			
+	> ul
+		padding: 20px 0
+		> li
+			&.active
+				a
+					text-decoration: underline
+					color: $accent
+			> a
+				&:hover
+					color: #fff
+					background-color: $accent
+					text-decoration: none
+
+.s-wide
+	padding: 80px 0
+	h2
+		text-align: center
+		margin-top: 0
+		line-height: em(19px)
+
+.s-dark
+	background-color: $blue
+	color: #fff
+
+.s-adv
+	padding: 55px 0 10px
+.s-adv-item
+	font-size: em(15px)
+	font-family: "OpenSansLight", sans-serif
+	color: #c0cdda
+	line-height: em(21px)
+	margin-bottom: 40px
+	h3
+		margin: 0
+		font-size: em(20px)
+		color: #dde9f3
+		font-family: "Exo2Bold", sans-serif
+		span
+			font-size: em(20px)
+			color: $accent
+	p
+		margin: 12px 0 0
+
+.table
+	display: table
+	width: 100%
+	table-layout: fixed
+.tr
+	display: table-row
+.td
+	display: table-cell
+	vertical-align: middle
+
+.contact-form
+	padding: 32px 26px
+	background-color: darken($blue, 6%)
+	.button
+		margin-top: 25px
+	&-head
+		text-align: center
+		h4
+			font-size: em(18px)
+			margin:
+				top: 0
+				bottom: 10px
+		p
+			color: #fff
+			opacity: .6
+			font-size: em(14px)
+			margin-top: 0
+
+.carousel-wrap
+	margin-bottom: 25px
+	box-shadow: #D7D7D7 0 0 0 5px inset
+	padding: 0 0 30px
+	+mt(.25s)
+	text-align: center
+	background-color: #F8F8F8
+	&:hover
+		box-shadow: $accent 0 0 0 5px inset
+		h3
+			color: $accent
+		.button
+			background-color: $accent
+			box-shadow: 0px 4px 0px darken($accent, 6%)
+			color: #fff
+			&:active, &:focus
+				background-color: darken($accent, 6%)
+				box-shadow: 0px 4px 0px darken($accent, 6%)
+		.car-img-wrap
+			svg
+				path
+					fill: $accent !important
+					opacity: 1
+	.car-img-wrap
+		position: relative
+		svg, .img-svg
+			position: absolute
+			max-height: 44px
+			left: 0
+			top: 25px
+			path
+				opacity: .7
+				+mt(.25s)
+				fill: #fff!important
+	h3
+		+mt(.25s)
+		font-size: em(17px)
+		font-family: "OpenSansBold", sans-serif
+	p
+		font-size: em(13px)
+		color: #444
+		margin-bottom: 20px
+	.carousel-text
+		padding: 0 20px
+	.button
+		margin-top: 20px
+
+.s-equipment
+	h2
+		margin-bottom: 60px
+
+.carousel-eq
+	.carousel-wrap
+		margin: 15px
+	.owl-dots
+		text-align: center
+		margin-top: 25px
+		.owl-dot
+			width: 14px
+			height: 14px
+			background-color: #D7D7D7
+			border-radius: 10em
+			display: inline-block
+			margin: 3px
+			&.active
+				background-color: $accent
+
+.isnohome .carousel-eq
+	text-align: center
+	.carousel-item
+		max-width: 280px
+		display: inline-block
+
+article
+	margin-bottom: 60px
+	img
+		width: 100%
+		max-width: 100%
+		height: auto
+	h1
+		a
+			text-decoration: underline
+			&:hover, &:active, &:focus
+				color: $accent
+		small
+			color: #999
