@@ -61,7 +61,7 @@ body textarea:required:valid
 		text-align: center
 		height: 360px
 		span
-			font-size: em(26px)
+			font-size: 26px
 			color: #fff
 			font-family: "OpenSansLight", sans-serif
 			i
@@ -70,15 +70,16 @@ body textarea:required:valid
 
 .tizer-triangle
 	position: absolute
-	top: 0
-	right: 0
+	top: -1px
+	right: -1px
 	color: #fff
 	font-size: 19px
-	@include triangle(65px, $accent, up-right)
+	// @include triangle(65px, $accent, up-right) Старый вариант, неправильно
+	@include triangle(up-right, 65px, 65px, $accent) // Новый правильный вариант с указанием высоты
 	i
 		position: absolute
-		top: -60px
-		right: 6px
+		top: 7px
+		right: -57px
 
 .s-profile
 	h2
@@ -190,7 +191,7 @@ body textarea:required:valid
 			background-color: #D0D0D0
 			+mt(.5s)
 	p
-		font-size: em(14px)
+		font-size: 14px
 		color: #666
 		padding: 0 15px
 		margin-top: 25px
@@ -255,12 +256,12 @@ body textarea:required:valid
 	text-align: center
 	padding-top: 25px
 	+mt(.3s)
-	.responsive-img
+	// .responsive-img
 	.row, .col-sm-12
 		display: block
 	.h2
 		display: block
-		line-height: em(21px)
+		line-height: 40px
 		width: 70%
 		margin: 40px auto
 	&-text
@@ -334,7 +335,7 @@ body textarea:required:valid
 
 .tizer-text
 	font-family: "OpenSansLight", sans-serif
-	font-size: em(19px)
+	font-size: 19px
 	margin-bottom: 50px
 
 .item-vertical-2
@@ -346,13 +347,13 @@ body textarea:required:valid
 			color: $accent
 	text-align: center
 	h3
-		font-size: em(17px)
+		font-size: 17px
 		font-family: "OpenSansBold", sans-serif
 		color: #444
 		margin-top: 40px
 		margin-bottom: 10px
 	p
-		font-size: em(13px)
+		font-size: 13px
 		color: #666
 		letter-spacing: 2px
 		margin-top: 0
@@ -361,7 +362,7 @@ body textarea:required:valid
 	margin-top: 22px
 	color: #999
 	font-family: "Exo2Bold", sans-serif
-	font-size: em(17px)
+	font-size: 17px
 	+mt(.5s)
 	i
 		font-size: 19px
@@ -427,7 +428,7 @@ body textarea:required:valid
 
 .testimonials-item
 	text-align: center
-	font-size: em(14px)
+	font-size: 14px
 	margin-top: 20px
 	&:hover
 		.rounded-img-wrap
@@ -446,13 +447,13 @@ body textarea:required:valid
 		box-shadow: rgba(0,0,0,.15) 0 0 5px
 	.testimonials-head
 		h4
-			font-size: em(16px)
+			font-size: 16px
 			font-family: "OpenSansBold", sans-serif
 			margin-top: 35px
 			margin-bottom: 8px
 			transition: all .5s ease
 			+ p
-				font-size: em(15px)
+				font-size: 15px
 				letter-spacing: 2px
 				margin-top: 0
 				color: #666
@@ -470,10 +471,10 @@ body textarea:required:valid
 			position: absolute
 			top: -16px
 			transform: translateX(-16px)
-			@include triangle(32px, $blue, up)
+			@include triangle(up, 32px, 32px, $blue)
 
 		h4
-			font-size: em(19px)
+			font-size: 19px
 			text-transform: none
 			margin-top: 0
 			margin-bottom: 16px
@@ -490,7 +491,7 @@ body textarea:required:valid
 			bottom: 20px
 
 .contacts-text
-	font-size: em(18px)
+	font-size: 18px
 	font-family: "OpenSansLight", sans-serif
 	p
 		margin:
@@ -521,7 +522,7 @@ form
 			display: block
 			width: 100%
 			color: #222
-			font-size: em(15px)
+			font-size: 15px
 			border-bottom: transparent 4px solid
 			transition: all .5s ease
 			&:focus
