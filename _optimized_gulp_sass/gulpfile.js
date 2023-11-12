@@ -47,8 +47,8 @@ function styles() {
 			autoprefixer({ grid: 'autoplace' }),
 			cssnano({ preset: ['default', { discardComments: { removeAll: true } }] })
 		]))
-		.pipe(rename({suffix: '.min', prefix : '_'}))
-		.pipe(dest('app'))
+		.pipe(rename({suffix: '.min', prefix : ''}))
+		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())
 }
 
