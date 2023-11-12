@@ -1,12 +1,14 @@
+@use 'sass:math'
+
 @import bourbon
 @import vars.sass
 
 //Load Libs SASS
-@import "app/libs/animate/animate.sass"
-@import "app/libs/font-awesome/css/font-awesome.sass"
-@import "app/libs/Magnific-Popup/magnific-popup.sass"
-@import "app/libs/owl-carousel/assets/owl.carousel.sass"
-@import "app/libs/selectize/dist/css/selectize"
+@import 'app/libs/animate/animate.sass'
+@import 'app/libs/font-awesome/css/font-awesome.sass'
+@import 'app/libs/Magnific-Popup/magnific-popup.sass'
+@import 'app/libs/owl-carousel/assets/owl.carousel.sass'
+@import 'app/libs/selectize/dist/css/selectize'
 
 *::-webkit-input-placeholder
 	color: #222
@@ -63,7 +65,7 @@ body textarea:required:valid
 		span
 			font-size: 26px
 			color: #fff
-			font-family: "OpenSansLight", sans-serif
+			font-family: 'OpenSansLight', sans-serif
 			i
 				color: #b5bdc6
 				font-size: 58px
@@ -334,7 +336,7 @@ body textarea:required:valid
 	filter: blur(5px)
 
 .tizer-text
-	font-family: "OpenSansLight", sans-serif
+	font-family: 'OpenSansLight', sans-serif
 	font-size: 19px
 	margin-bottom: 50px
 
@@ -348,7 +350,7 @@ body textarea:required:valid
 	text-align: center
 	h3
 		font-size: 17px
-		font-family: "OpenSansBold", sans-serif
+		font-family: 'OpenSansBold', sans-serif
 		color: #444
 		margin-top: 40px
 		margin-bottom: 10px
@@ -361,7 +363,7 @@ body textarea:required:valid
 .iv-phone
 	margin-top: 22px
 	color: #999
-	font-family: "Exo2Bold", sans-serif
+	font-family: 'Exo2Bold', sans-serif
 	font-size: 17px
 	+mt(.5s)
 	i
@@ -448,7 +450,7 @@ body textarea:required:valid
 	.testimonials-head
 		h4
 			font-size: 16px
-			font-family: "OpenSansBold", sans-serif
+			font-family: 'OpenSansBold', sans-serif
 			margin-top: 35px
 			margin-bottom: 8px
 			transition: all .5s ease
@@ -492,7 +494,7 @@ body textarea:required:valid
 
 .contacts-text
 	font-size: 18px
-	font-family: "OpenSansLight", sans-serif
+	font-family: 'OpenSansLight', sans-serif
 	p
 		margin:
 			top: 0
@@ -546,7 +548,7 @@ form
 		margin-top: -7px
 		content: '\f107'
 		border: none
-		font-family: "fontAwesome"
+		font-family: 'fontAwesome'
 		font-size: 20px
 	&.dropdown-active::after
 		margin-top: -7px
@@ -631,4 +633,4 @@ article
 			height: 380px !important
 
 //ALWAYS END
-@import "_media.sass"
+@import media
